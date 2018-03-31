@@ -2,28 +2,32 @@
 
 public class Shop : MonoBehaviour
 {
+    public TurretBlueprint standardTurret;
+    public TurretBlueprint mediumTurret;
+    public TurretBlueprint heavyTurret;
+
     BuildManager buildManager;
     void Start()
     {
         buildManager = BuildManager.instance;
     }
 
-    public void PurchaseStandardTurret()
+    public void SelectStandardTurret()
     {
         Debug.Log("Standard turret selected");
-        buildManager.SetTurretToBuild(buildManager.standardTurretPrefab);
+        buildManager.SelectTurretToBuild(standardTurret);
     }
     
-    public void PurchaseMediumTurret()
+    public void SelectMediumTurret()
     {
         Debug.Log("Medium turret selected");
-        buildManager.SetTurretToBuild(buildManager.mediumTurretPrefab);
+        buildManager.SelectTurretToBuild(mediumTurret);
     }
 
-    public void PurchaseHeavyTurret()
+    public void SelectHeavyTurret()
     {
         Debug.Log("Heavy turret selected");
-        buildManager.SetTurretToBuild(buildManager.heavyTurretPrefab);
+        buildManager.SelectTurretToBuild(heavyTurret);
     }
 
 

@@ -71,7 +71,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 471}
   m_MaxSize: {x: 10004, y: 14021}
   vertical: 1
-  controlID: 32
+  controlID: 56
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -115,8 +115,8 @@ MonoBehaviour:
     y: 347
     width: 895
     height: 384
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -190,7 +190,7 @@ MonoBehaviour:
   m_MinSize: {x: 711, y: 471}
   m_MaxSize: {x: 18006, y: 14021}
   vertical: 0
-  controlID: 75
+  controlID: 128
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 442}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 76
+  controlID: 10
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -279,8 +279,8 @@ MonoBehaviour:
     y: 0
     width: 895
     height: 347
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -430,14 +430,14 @@ MonoBehaviour:
   m_StartGridSize: 64
   m_LastFolders: []
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Cihan\OneDrive - Office 365 Fontys\School\Semester 3\Semester
-    3\Game Design 3D\MyProject\YEET-TowerDefence\YEET Tower Defence
+  m_LastProjectPath: C:\Users\Gebruiker\Office 365 Fontys\Kurt,Cihan C. - YEET-TowerDefence\YEET
+    Tower Defence
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: ee240000
     m_LastClickedID: 9454
-    m_ExpandedIDs: 0000000034280000542800006e280000ba280000
+    m_ExpandedIDs: 00000000ce270000f82700001a280000742800002e2e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -462,10 +462,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 240.9037}
+    scrollPos: {x: 0, y: 10}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: a272fbff0000000034280000542800006e280000ba280000
+    m_ExpandedIDs: 00000000ce270000d4270000f82700001a280000742800002e2e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -625,14 +625,14 @@ MonoBehaviour:
     height: 326
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 0
-  lastFramingTime: 9462.980160008465
+  lastFramingTime: 9632.63665447374
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: Infinity, y: Infinity, z: Infinity}
+    m_Target: {x: 48.561375, y: 10.050715, z: 15.9668865}
     speed: 2
-    m_Value: {x: NaN, y: NaN, z: NaN}
+    m_Value: {x: 48.561375, y: 10.050715, z: 15.9668865}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -656,25 +656,24 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.23400232, y: 0.598887, z: -0.1888064, w: 0.74224603}
+    m_Target: {x: 0.45436287, y: 0.07334398, z: -0.037570216, w: 0.8869969}
     speed: 2
-    m_Value: {x: 0.23400232, y: 0.598887, z: -0.18880638, w: 0.74224603}
+    m_Value: {x: 0.45436287, y: 0.07334398, z: -0.037570216, w: 0.8869969}
   m_Size:
-    m_Target: 1580.1841
+    m_Target: 32.667023
     speed: 2
-    m_Value: 1580.1841
+    m_Value: 32.667023
   m_Ortho:
     m_Target: 0
     speed: 2
     m_Value: 0
   m_ShowGlobalGrid: 1
-  m_LastSceneViewRotation: {x: 0.23400232, y: 0.598887, z: -0.1888064, w: 0.74224603}
+  m_LastSceneViewRotation: {x: 0.14078209, y: 0.094306484, z: -0.013472497, w: 0.98544675}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
-  m_LastLockedObject: {fileID: 1682913627794390, guid: 6fac11cb20c01d549b411f3fb90f44d6,
-    type: 2}
-  m_ViewIsLockedToObject: 1
+  m_LastLockedObject: {fileID: 0}
+  m_ViewIsLockedToObject: 0
 --- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -703,10 +702,10 @@ MonoBehaviour:
     height: 349
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 34bffaff
-    m_LastClickedID: 0
-    m_ExpandedIDs: 62aafeff84f6feffccfaffff00000000822a0000022b0000122b0000
+    scrollPos: {x: 0, y: 3252}
+    m_SelectedIDs: b6a3f6ff
+    m_LastClickedID: -613450
+    m_ExpandedIDs: baa3f6ffc8a3f6ff16e5f9ff602cfaff2e09fbff7235fbff9edffbff4afbffff9efbffff0000000020290000b4290000c02900007e2a0000f02a0000ae2b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
