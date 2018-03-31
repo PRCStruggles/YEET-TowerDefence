@@ -1,25 +1,25 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Turret : MonoBehaviour {
+public class Turret : MonoBehaviour
+{
 
     private Transform target;
+
+    private float fireCountdown = 0f;
+
     public float range = 15f;
+    public float turnSpeed = 10f;
+    public float fireRate = 1f;
 
     public string enemyTag = "Enemy";
 
     public Transform partToRotate;
-    public float turnSpeed = 10f;
-
-    private float fireCountdown = 0f;
-    public float fireRate = 1f;
-
-    public GameObject bulletPrefab;
     public Transform firePoint;
 
-	// Use this for initialization
-	void Start () {
+    public GameObject bulletPrefab;
+
+	void Start ()
+    {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
 	}
 
@@ -49,8 +49,8 @@ public class Turret : MonoBehaviour {
         }
     }
 	
-	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 		if (target == null)
         {
             return;

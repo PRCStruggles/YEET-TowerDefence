@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class TurnManager : MonoBehaviour {
@@ -8,8 +7,6 @@ public class TurnManager : MonoBehaviour {
     private int count = 0;
  
 
-
-    // Use this for initialization
     void Start()
     {
         SwitchTurn();

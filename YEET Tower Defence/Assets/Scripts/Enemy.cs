@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Enemy : MonoBehaviour {
+public class Enemy : MonoBehaviour
+{
 
     public float speed = 10f;
 
@@ -36,6 +35,7 @@ public class Enemy : MonoBehaviour {
 
         GameObject effect =  (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(effect, 5f);
+        WaveSpawner.enemiesAlive--;
         Destroy(gameObject);
     }
 
@@ -52,7 +52,6 @@ public class Enemy : MonoBehaviour {
 
     void GetNextWaypoint()
     {
-
         if (wavepointIndex  >= wayPoint.wayPoints.Length - 1)
         {
             EndPath();
@@ -65,6 +64,7 @@ public class Enemy : MonoBehaviour {
     void EndPath ()
     {
         PlayerStats.Lives--;
+        WaveSpawner.enemiesAlive--;
         Destroy(gameObject);
     }
 }
