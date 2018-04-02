@@ -1,9 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class wayPoint : MonoBehaviour {
-
+public class wayPoint : MonoBehaviour
+{
     public static Transform[] wayPoints;
 
     void Awake()

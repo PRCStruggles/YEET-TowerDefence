@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
@@ -7,13 +9,6 @@ public class CameraController : MonoBehaviour
     public float Speed = 30f;
 	void Update ()
     {
-
-        if (GameManager.gameEnded)
-        {
-            enabled = false;
-            return;
-        }
-
         if (Input.GetKeyDown ("q"))
         {
             allowMovement = !allowMovement;

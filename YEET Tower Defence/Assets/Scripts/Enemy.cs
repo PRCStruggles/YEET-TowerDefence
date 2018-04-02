@@ -2,7 +2,6 @@
 
 public class Enemy : MonoBehaviour
 {
-
     public float speed = 10f;
 
     public int health = 100;
@@ -35,7 +34,9 @@ public class Enemy : MonoBehaviour
 
         GameObject effect =  (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(effect, 5f);
+
         WaveSpawner.enemiesAlive--;
+
         Destroy(gameObject);
     }
 
@@ -52,6 +53,7 @@ public class Enemy : MonoBehaviour
 
     void GetNextWaypoint()
     {
+
         if (wavepointIndex  >= wayPoint.wayPoints.Length - 1)
         {
             EndPath();

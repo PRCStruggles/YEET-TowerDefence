@@ -4,20 +4,18 @@ using UnityEngine.UI;
 
 public class WaveSpawner : MonoBehaviour
 {
+    public static int enemiesAlive = 0;
 
     public Wave[] waves;
-
-    public static int enemiesAlive = 0;
 
     public Transform spawnPoint;
 
     public float timeBetweenWaves = 5f;
+    private float countdown = 2f;
 
     public Text waveCountdownText;
 
     private int waveNumber = 0;
-
-    private float countdown = 2f;
 
     void Update()
     {
@@ -25,10 +23,8 @@ public class WaveSpawner : MonoBehaviour
         {
             return;
         }
-
         if (countdown <= 0f)
         {
-
             StartCoroutine(SpawnWave());
             countdown = timeBetweenWaves;
             return;
@@ -41,16 +37,16 @@ public class WaveSpawner : MonoBehaviour
         waveCountdownText.text = string.Format("{0:00.00} ", countdown);
     }
 
-    IEnumerator SpawnWave()
+    IEnumerator SpawnWave ()
     {
+
         Wave wave = waves[waveNumber];
 
         for (int i = 0; i < wave.count; i++)
         {
-            SpawnEnemy(wave.enemy);
+            SpawnEnemy(wave.enemyPrefab);
             yield return new WaitForSeconds(1f / wave.rate);
         }
-
         waveNumber++;
     }
 
