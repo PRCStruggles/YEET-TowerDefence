@@ -8,51 +8,44 @@ public class WaveSpawner : MonoBehaviour
 
     public Wave[] waves;
 
-    public Transform spawnPoint;
-
-    public float timeBetweenWaves = 5f;
-    private float countdown = 2f;
-
-    public Text waveCountdownText;
+    public Transform spawnPointP1;
+    public Transform spawnPointP2;
 
     private int waveNumber = 0;
 
-    void Update()
+    public TurnManager manager;   
+
+    public void Spawnwaver()
     {
-        if (enemiesAlive > 0)
-        {
-            return;
-        }
-        if (countdown <= 0f)
-        {
-            StartCoroutine(SpawnWave());
-            countdown = timeBetweenWaves;
-            return;
-        }
-
-        countdown -= Time.deltaTime;
-
-        countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
-
-        waveCountdownText.text = string.Format("{0:00.00} ", countdown);
+        StartCoroutine(SpawnWave());
+       
     }
 
-    IEnumerator SpawnWave ()
-    {
 
+    public IEnumerator SpawnWave()
+    {
         Wave wave = waves[waveNumber];
 
         for (int i = 0; i < wave.count; i++)
         {
-            SpawnEnemy(wave.enemyPrefab);
+            SpawnEnemies(wave.enemyPrefab);
             yield return new WaitForSeconds(1f / wave.rate);
         }
         waveNumber++;
+
+        if (waveNumber == waves.Length)
+        {
+            enabled = false;
+        }
+        yield return new WaitUntil(() => enemiesAlive <= 0);
+        manager.SwitchTurn();
     }
 
-    void SpawnEnemy(GameObject enemy)
+    public void SpawnEnemies(GameObject enemy)
     {
-        Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
+        Instantiate(enemy, spawnPointP1.position, spawnPointP2.rotation);
+        enemiesAlive++;
+        Instantiate(enemy, spawnPointP2.position, spawnPointP2.rotation);
         enemiesAlive++;
     }
 

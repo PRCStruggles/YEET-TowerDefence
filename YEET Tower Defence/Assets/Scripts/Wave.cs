@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [System.Serializable]
-public class Wave : MonoBehaviour
+public class Wave
 {
     public float rate;
     public GameObject enemyPrefab;

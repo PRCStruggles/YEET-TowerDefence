@@ -35,11 +35,13 @@ public class Node : MonoBehaviour
 
         if (currentTurret != null)
         {
-            Debug.Log("Can't build there!");
             return;
         }
-
-        buildManager.BuildTurretOn(this);
+        if (GameManager.Building)
+        {
+            buildManager.BuildTurretOn(this);
+            return;
+        }
     }
     void OnMouseEnter()
     {

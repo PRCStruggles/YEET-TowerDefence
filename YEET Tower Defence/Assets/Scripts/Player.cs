@@ -1,16 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Player : MonoBehaviour {
+public class Player : MonoBehaviour
+{
+    public string ID;
+    public int Money;
+    public int startMoney;
 
-    public void SetUiOn()
+    void Start()
     {
-        this.gameObject.SetActive(true);
-    }
-
-    public void SetUiOff()
-    {
-        gameObject.SetActive(false);
+        Money = startMoney;
     }
 }

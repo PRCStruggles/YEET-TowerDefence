@@ -13,9 +13,18 @@ public class Enemy : MonoBehaviour
     private Transform target;
     private int wavepointIndex = 0;
 
+
     void Start()
     {
-        target = wayPoint.wayPoints[0];
+        if (transform.position.x > 35)
+        {
+            target = wayPointP2.wayPointsP2[0];
+
+        }
+        else
+        {
+            target = wayPoint.wayPoints[0];
+        }
     }
 
     public void TakeDamage (int amount)
@@ -30,9 +39,9 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        PlayerStats.Money += value;
+        TurnManager.GetPlayerWithTurn().Money += value;
 
-        GameObject effect =  (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
+        GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(effect, 5f);
 
         WaveSpawner.enemiesAlive--;
@@ -45,15 +54,23 @@ public class Enemy : MonoBehaviour
         Vector3 dir = target.position - transform.position;
         transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
 
-        if (Vector3.Distance(transform.position, target.position) <= 0.4f)
-        {
-            GetNextWaypoint();
-        }
+            if (Vector3.Distance(transform.position, target.position) <= 0.6f)
+            {
+                if (transform.position.x > 35)
+                {
+                    GetNextWaypointP2();
+
+                }
+                else
+                {
+                    GetNextWaypointP1();
+                }
+
+            }
     }
 
-    void GetNextWaypoint()
+    void GetNextWaypointP1()
     {
-
         if (wavepointIndex  >= wayPoint.wayPoints.Length - 1)
         {
             EndPath();
@@ -63,9 +80,20 @@ public class Enemy : MonoBehaviour
         target = wayPoint.wayPoints[wavepointIndex];
     }
 
+    void GetNextWaypointP2()
+    {
+        if (wavepointIndex >= wayPointP2.wayPointsP2.Length - 1)
+        {
+            EndPath();
+            return;
+        }
+        wavepointIndex++;
+        target = wayPointP2.wayPointsP2[wavepointIndex];
+    }
+
+
     void EndPath ()
     {
-        PlayerStats.Lives--;
         WaveSpawner.enemiesAlive--;
         Destroy(gameObject);
     }

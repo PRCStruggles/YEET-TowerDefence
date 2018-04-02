@@ -1,26 +1,23 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class GameManager : MonoBehaviour {
+public class GameManager : MonoBehaviour
+{
 
     private bool gameEnded = false;
+    public static bool Building = true;
 
-	// Update is called once per frame
-	void Update () {
+
+	void Update ()
+    {
         if (gameEnded)
         {
             return;
-        }
-
-		if (PlayerStats.Lives <= 0)
-        {
-            EndGame();
         }
 	}
 
     void EndGame()
     {
+        Building = false;
         gameEnded = true;
         Debug.Log("Game Over!");
     }

@@ -1,15 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
-public class TurnManager : MonoBehaviour {
+public class TurnManager : MonoBehaviour
+{
+    public Player player1;
+    public Player player2;
 
-    public List<Player> Players;
+    public Button button;
+    public Text text;
+
+    private static Player HisTurn;
+
     private int count = 0;
- 
-
-
-    // Use this for initialization
     void Start()
     {
         SwitchTurn();
@@ -17,29 +19,29 @@ public class TurnManager : MonoBehaviour {
 
     public void SwitchTurn()
     {
-        SetEveryOneOff();
-        Players[count++ % Players.Count].SetUiOn();
-
-    }
-
-    public void SetEveryOneOff()
-    {
-        foreach (Player player in Players)
+        if (GameManager.Building)
         {
-            player.SetUiOff();
-        }
-    }
-
-    public Player GetCurrentPlayer()
-    {
-        for (int i = 0; i < Players.Count; i++)
-        {
-            if (Players[i].isActiveAndEnabled)
+            button.enabled = true;
+            text.enabled = true;
+            if (count++ % 2 == 0)
             {
-                return Players[i];
+                HisTurn = player1;
+            }
+
+            else
+            {
+                HisTurn = player2;
             }
         }
+        else
+        {
+            text.enabled = false;
+            button.enabled = false;
+        }
+    }
 
-        return null;
+    public static Player GetPlayerWithTurn()
+    {
+        return HisTurn;
     }
 }
