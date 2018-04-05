@@ -41,10 +41,7 @@ public class Enemy : MonoBehaviour
     }
 
     void Die()
-    {
-        //TurnManager.GetPlayerWithTurn().Money += value;
-
-
+    { 
         GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(effect, 5f);
 

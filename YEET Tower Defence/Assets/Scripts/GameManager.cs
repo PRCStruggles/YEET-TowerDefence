@@ -3,12 +3,20 @@
 public class GameManager : MonoBehaviour
 {
 
-    private bool gameEnded = false;
-    public WaveSpawner waveSpawner;
+    public static bool gameEnded = false;
+
+    public GameObject gameOverUI;
 
 
 	void Update ()
     {
+        #region TestGameOverButton
+        if (Input.GetKeyDown("e"))
+        {
+            EndGame();
+        }
+        #endregion
+
         if (gameEnded)
         {
             return;
@@ -18,11 +26,7 @@ public class GameManager : MonoBehaviour
     void EndGame()
     {
         gameEnded = true;
-        Debug.Log("Game Over!");
+        gameOverUI.SetActive(true);
     }
 
-    public void startWave()
-    {
-        
-    }
 }
