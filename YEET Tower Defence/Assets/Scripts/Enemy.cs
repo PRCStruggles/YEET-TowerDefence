@@ -74,6 +74,7 @@ public class Enemy : MonoBehaviour
     {
         if (wavepointIndex  >= wayPoint.wayPoints.Length - 1)
         {
+            GameManager.players[0].Lives--;
             EndPath();
             return;
         }
@@ -85,6 +86,7 @@ public class Enemy : MonoBehaviour
     {
         if (wavepointIndex >= wayPointP2.wayPointsP2.Length - 1)
         {
+            GameManager.players[1].Lives--;
             EndPath();
             return;
         }

@@ -8,7 +8,7 @@ public class GameOver : MonoBehaviour
 
     void OnEnable()
     {
-        winner.text = "Player: " + "has won";
+        winner.text = "Player " + GameManager.winner.ID + " has won";
     }
 
     public void PlayAgain()

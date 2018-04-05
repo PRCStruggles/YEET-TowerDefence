@@ -43,7 +43,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -89,7 +89,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000002, guid: a47dbba0acaf16f46b9559e4e7d89887,
+    type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -941,6 +942,8 @@ MonoBehaviour:
   ID: 1
   Money: 0
   startMoney: 500
+  startLives: 1
+  Lives: 0
 --- !u!4 &140179432 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4901759546690208, guid: 688df9bb14d70f44cba87dc43d897597,
@@ -1758,6 +1761,8 @@ MonoBehaviour:
   ID: 2
   Money: 0
   startMoney: 500
+  startLives: 1
+  Lives: 0
 --- !u!1001 &231060898
 Prefab:
   m_ObjectHideFlags: 0
@@ -4706,6 +4711,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverUI: {fileID: 1960648823}
+  player1: {fileID: 139773262}
+  player2: {fileID: 229398268}
 --- !u!4 &545820242 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4887733714146322, guid: f40352fa96a6c964d9a9c5384a738bf3,
@@ -12567,7 +12574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -12575,7 +12582,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.85294116, g: 0.84666955, b: 0.84666955, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -12593,7 +12600,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1809308373}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1960648825}
+        m_MethodName: PlayAgain
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1809308373
@@ -13010,8 +13028,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d089d6d997bb0e4bab5eb9a7789baaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player1: {fileID: 139773262}
-  player2: {fileID: 229398268}
   button: {fileID: 1094576511}
   text: {fileID: 851136223}
 --- !u!4 &1940078506
@@ -13142,6 +13158,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1960648824}
+  - component: {fileID: 1960648825}
   m_Layer: 5
   m_Name: GameOver
   m_TagString: Untagged
@@ -13170,6 +13187,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -608, y: -248}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1960648825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1960648823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc928771b6fd224089774cd92528087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winner: {fileID: 1754738015}
 --- !u!1001 &1965696142
 Prefab:
   m_ObjectHideFlags: 0

@@ -3,9 +3,6 @@ using UnityEngine.UI;
 
 public class TurnManager : MonoBehaviour
 {
-    public Player player1;
-    public Player player2;
-
     private int gameState;
 
     public Button button;
@@ -38,13 +35,13 @@ public class TurnManager : MonoBehaviour
                 break;
 
             case 1: //player 1 turn
-                HisTurn = player1;
+                HisTurn = GameManager.players[0];
                 button.enabled = true;
 
                 break;
 
             case 2: //player 2 turn
-                HisTurn = player2;
+                HisTurn = GameManager.players[1];
                 break;
 
             default:
