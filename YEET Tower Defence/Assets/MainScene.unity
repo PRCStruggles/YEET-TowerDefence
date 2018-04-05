@@ -4271,25 +4271,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - rate: 2
+    enemyPrefab: {fileID: 1715825449798230, guid: 59fec45ccf26f8c4190f5e9be1d1602c,
+      type: 2}
+    count: 3
+  - rate: 2
     enemyPrefab: {fileID: 1715825449798230, guid: d3f3f32e6c62d214caa4e28cc53993ce,
       type: 2}
     count: 5
-  - rate: 2
-    enemyPrefab: {fileID: 1715825449798230, guid: d3f3f32e6c62d214caa4e28cc53993ce,
+  - rate: 1.5
+    enemyPrefab: {fileID: 1715825449798230, guid: f43c662120828c94ab5c30eaa95706f5,
       type: 2}
-    count: 8
-  - rate: 2
-    enemyPrefab: {fileID: 1715825449798230, guid: d3f3f32e6c62d214caa4e28cc53993ce,
+    count: 20
+  - rate: 3
+    enemyPrefab: {fileID: 1715825449798230, guid: f43c662120828c94ab5c30eaa95706f5,
       type: 2}
-    count: 10
+    count: 50
   - rate: 1
     enemyPrefab: {fileID: 1715825449798230, guid: 59fec45ccf26f8c4190f5e9be1d1602c,
       type: 2}
     count: 3
-  - rate: 3
-    enemyPrefab: {fileID: 1715825449798230, guid: f43c662120828c94ab5c30eaa95706f5,
-      type: 2}
-    count: 10
   - rate: 3
     enemyPrefab: {fileID: 1715825449798230, guid: f43c662120828c94ab5c30eaa95706f5,
       type: 2}
