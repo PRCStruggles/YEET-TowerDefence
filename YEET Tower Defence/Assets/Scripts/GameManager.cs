@@ -3,9 +3,13 @@
 public class GameManager : MonoBehaviour
 {
 
-    public static bool gameEnded = false;
-
+    public static bool gameEnded;
     public GameObject gameOverUI;
+
+    void Start()
+    {
+        gameEnded = false;
+    }
 
 
 	void Update ()
