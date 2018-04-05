@@ -4,8 +4,9 @@ using UnityEngine.UI;
 public class MoneyUI : MonoBehaviour
 {
     public Text moneyText;
+    public Player player;
 	void Update ()
     {
-        moneyText.text = "$" + TurnManager.GetPlayerWithTurn().Money.ToString();
+        moneyText.text = "$" + player.Money.ToString();
 	}
 }

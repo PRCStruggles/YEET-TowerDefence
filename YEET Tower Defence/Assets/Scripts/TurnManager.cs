@@ -6,46 +6,52 @@ public class TurnManager : MonoBehaviour
     public Player player1;
     public Player player2;
 
+    private int gameState;
+
     public Button button;
     public Text text;
 
     private static Player HisTurn;
-
-    private int count = 0;
     void Start()
     {
+        gameState = 0;
         SwitchTurn();
     }
 
     public void SwitchTurn()
     {
-        Debug.Log("1");
-        if (GameManager.Building)
+        if (gameState == 2)
         {
-            Debug.Log("2");
-            button.enabled = true;
-            text.enabled = true;
-            Debug.Log("3");
-            if (count++ % 2 == 0)
-            {
-                Debug.Log("2eins");
-                HisTurn = player1;
-            }
-
-            else
-            {
-                Debug.Log("zwei");
-                HisTurn = player2;
-                
-            }
-            Debug.Log("done");
+            gameState = 0;
         }
         else
         {
-            Debug.Log("elsen");
-            text.enabled = false;
-            button.enabled = false;
+            gameState++;
         }
+
+
+        switch (gameState)
+        {
+            case 0: //playingphase
+                HisTurn = null;
+                button.enabled = false;
+                break;
+
+            case 1: //player 1 turn
+                HisTurn = player1;
+                button.enabled = true;
+
+                break;
+
+            case 2: //player 2 turn
+                HisTurn = player2;
+                break;
+
+            default:
+                break;
+        }
+
+
     }
 
     public static Player GetPlayerWithTurn()

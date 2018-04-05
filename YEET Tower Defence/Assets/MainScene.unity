@@ -890,6 +890,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moneyText: {fileID: 135124129}
+  player: {fileID: 139773262}
 --- !u!4 &138394088 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4901759546690208, guid: 688df9bb14d70f44cba87dc43d897597,
@@ -904,7 +905,6 @@ GameObject:
   m_Component:
   - component: {fileID: 139773261}
   - component: {fileID: 139773262}
-  - component: {fileID: 139773263}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Untagged
@@ -938,20 +938,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e965cd064f7f974ebfdbaf867a5ac83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: playerEEN
+  ID: 1
   Money: 0
-  startMoney: 0
---- !u!114 &139773263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 139773260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d3ed6d736f1a1c42874cc30acda72e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  startMoney: 500
 --- !u!4 &140179432 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4901759546690208, guid: 688df9bb14d70f44cba87dc43d897597,
@@ -1604,7 +1593,7 @@ RectTransform:
   m_Children:
   - {fileID: 2034410836}
   m_Father: {fileID: 463319159}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1733,7 +1722,6 @@ GameObject:
   m_Component:
   - component: {fileID: 229398267}
   - component: {fileID: 229398268}
-  - component: {fileID: 229398269}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Untagged
@@ -1767,20 +1755,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e965cd064f7f974ebfdbaf867a5ac83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: playerTwee
+  ID: 2
   Money: 0
-  startMoney: 0
---- !u!114 &229398269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 229398266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d3ed6d736f1a1c42874cc30acda72e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  startMoney: 500
 --- !u!1001 &231060898
 Prefab:
   m_ObjectHideFlags: 0
@@ -2207,7 +2184,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: $400
+  m_Text: '$250
+
+'
 --- !u!222 &270507632
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2410,6 +2389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moneyText: {fileID: 290828947}
+  player: {fileID: 229398268}
 --- !u!114 &290828947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3703,8 +3683,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 268426086}
-  - {fileID: 1347842984}
   - {fileID: 219164131}
+  - {fileID: 1347842984}
   m_Father: {fileID: 831174609}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4275,6 +4255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffd80528b9c757f45a58e4a102883257, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waveSpawner: {fileID: 0}
 --- !u!4 &545820242 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4887733714146322, guid: f40352fa96a6c964d9a9c5384a738bf3,
@@ -7876,12 +7857,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: 
+      - m_Target: {fileID: 540901343}
+        m_MethodName: Spawnwaver
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -8635,59 +8616,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4901759546690208, guid: 688df9bb14d70f44cba87dc43d897597,
     type: 2}
   m_PrefabInternal: {fileID: 1385975684}
---- !u!1 &1282378691
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1282378693}
-  - component: {fileID: 1282378692}
-  m_Layer: 0
-  m_Name: waveSpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1282378692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1282378691}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46be52905ddcef6438f3a2e870ca1bbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waves:
-  - rate: 0
-    enemyPrefab: {fileID: 0}
-    count: 0
-  - rate: 0
-    enemyPrefab: {fileID: 0}
-    count: 0
-  - rate: 0
-    enemyPrefab: {fileID: 0}
-    count: 0
-  spawnPointP1: {fileID: 1781395372}
-  spawnPointP2: {fileID: 1425735204}
-  manager: {fileID: 1940078505}
---- !u!4 &1282378693
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1282378691}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30.036226, y: -29.765625, z: 6.631751}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1284528400 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4901759546690208, guid: 688df9bb14d70f44cba87dc43d897597,
@@ -9093,7 +9021,7 @@ RectTransform:
   m_Children:
   - {fileID: 2114111918}
   m_Father: {fileID: 463319159}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -9946,7 +9874,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: $250
+  m_Text: $400
 --- !u!222 &1459218053
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12365,6 +12293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player1: {fileID: 139773262}
   player2: {fileID: 229398268}
+  gameMaster: {fileID: 0}
   button: {fileID: 1094576511}
   text: {fileID: 851136223}
 --- !u!4 &1940078506
@@ -12378,7 +12307,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1945824541 stripped
 Transform:

@@ -37,7 +37,7 @@ public class Node : MonoBehaviour
         {
             return;
         }
-        if (GameManager.Building)
+        if (TurnManager.GetPlayerWithTurn() != null)
         {
             buildManager.BuildTurretOn(this);
             return;

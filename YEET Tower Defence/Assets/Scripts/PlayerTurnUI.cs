@@ -8,12 +8,12 @@ public class PlayerTurnUI : MonoBehaviour
 
     void Update()
     {
-        if (GameManager.Building)
+        if (TurnManager.GetPlayerWithTurn() != null)
         {
              playerTurnText.text = "Player " + TurnManager.GetPlayerWithTurn().ID.ToString() + "'s turn";
            // playerTurnText.text = "building";
         }
-        else if (!GameManager.Building)
+        else if (TurnManager.GetPlayerWithTurn() == null)
         {
             playerTurnText.text = "not building";
         }

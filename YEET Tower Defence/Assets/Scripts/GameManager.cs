@@ -4,7 +4,7 @@ public class GameManager : MonoBehaviour
 {
 
     private bool gameEnded = false;
-    public static bool Building = true;
+    public WaveSpawner waveSpawner;
 
 
 	void Update ()
@@ -17,8 +17,12 @@ public class GameManager : MonoBehaviour
 
     void EndGame()
     {
-        Building = false;
         gameEnded = true;
         Debug.Log("Game Over!");
+    }
+
+    public void startWave()
+    {
+        
     }
 }

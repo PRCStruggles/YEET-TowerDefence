@@ -27,19 +27,23 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void TakeDamage (int amount)
+    public bool TakeDamage (int amount)
     {
         health -= amount;
 
         if (health <= 0)
         {
             Die();
+            return true;
         }
+
+        return false;
     }
 
     void Die()
     {
-        TurnManager.GetPlayerWithTurn().Money += value;
+        //TurnManager.GetPlayerWithTurn().Money += value;
+
 
         GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(effect, 5f);
@@ -96,5 +100,10 @@ public class Enemy : MonoBehaviour
     {
         WaveSpawner.enemiesAlive--;
         Destroy(gameObject);
+    }
+    
+    public void AddGold(Bullet bullet)
+    {
+        bullet.owner.owner.Money += value;  
     }
 }

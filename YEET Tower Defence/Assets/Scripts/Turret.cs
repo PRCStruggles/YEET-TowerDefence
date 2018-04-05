@@ -1,11 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Turret : MonoBehaviour {
+public class Turret : MonoBehaviour
+{
 
     private Transform target;
     public float range = 15f;
+
+    public Player owner;
 
     public string enemyTag = "Enemy";
 
@@ -19,7 +20,8 @@ public class Turret : MonoBehaviour {
     public Transform firePoint;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
 	}
 
@@ -50,7 +52,8 @@ public class Turret : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 		if (target == null)
         {
             return;
@@ -72,8 +75,10 @@ public class Turret : MonoBehaviour {
 
     void Shoot()
     {
-        GameObject bulletGO =  (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        GameObject bulletGO = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
+
+            bullet.owner = this;
 
         if (bullet != null)
         {

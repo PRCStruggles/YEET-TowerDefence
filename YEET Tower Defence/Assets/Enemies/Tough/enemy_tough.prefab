@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 23422183154440734}
   - component: {fileID: 114830036273178128}
   m_Layer: 0
-  m_Name: enemy_simplee
+  m_Name: enemy_tough
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57,7 +57,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 19bd64cb710a71241b4134b9af736211, type: 2}
+  - {fileID: 2100000, guid: 40f6e04bc0176a7489dd8c60c49b3576, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -2,6 +2,7 @@
 
 public class Bullet : MonoBehaviour {
 
+    public Turret owner;
     private Transform target;
 
     public float speed = 70f;
@@ -50,7 +51,12 @@ public class Bullet : MonoBehaviour {
 
         if (enemy != null)
         {
-            enemy.TakeDamage(damage);
+            bool die = enemy.TakeDamage(damage);
+            if (die)
+            {
+                enemy.AddGold(this);
+            }
+
         }
     }
 }
