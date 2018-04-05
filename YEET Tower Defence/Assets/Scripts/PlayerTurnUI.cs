@@ -10,8 +10,8 @@ public class PlayerTurnUI : MonoBehaviour
     {
         if (GameManager.Building)
         {
-            // playerTurnText.text = "Player " + TurnManager.GetPlayerWithTurn().ID.ToString() + "'s turn";
-            playerTurnText.text = "building";
+             playerTurnText.text = "Player " + TurnManager.GetPlayerWithTurn().ID.ToString() + "'s turn";
+           // playerTurnText.text = "building";
         }
         else if (!GameManager.Building)
         {

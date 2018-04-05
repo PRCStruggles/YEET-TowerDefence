@@ -938,7 +938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e965cd064f7f974ebfdbaf867a5ac83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 
+  ID: playerEEN
   Money: 0
   startMoney: 0
 --- !u!114 &139773263
@@ -952,7 +952,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3ed6d736f1a1c42874cc30acda72e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 500
 --- !u!4 &140179432 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4901759546690208, guid: 688df9bb14d70f44cba87dc43d897597,
@@ -1768,7 +1767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e965cd064f7f974ebfdbaf867a5ac83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 
+  ID: playerTwee
   Money: 0
   startMoney: 0
 --- !u!114 &229398269
@@ -1782,7 +1781,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3ed6d736f1a1c42874cc30acda72e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 400
 --- !u!1001 &231060898
 Prefab:
   m_ObjectHideFlags: 0
