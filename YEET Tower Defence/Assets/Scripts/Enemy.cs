@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
-        if (transform.position.x > 35)
+        if (transform.position.x > 40)
         {
             target = wayPointP2.wayPointsP2[0];
 
@@ -57,7 +57,7 @@ public class Enemy : MonoBehaviour
 
             if (Vector3.Distance(transform.position, target.position) <= 0.6f)
             {
-                if (transform.position.x > 35)
+                if (transform.position.x > 38)
                 {
                     GetNextWaypointP2();
 

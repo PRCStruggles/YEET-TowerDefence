@@ -210,8 +210,8 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 58df39541e37b0a42b51d9e4ac31855a, type: 2}
-  - {fileID: 2100000, guid: ebc56ccf24d813147b0cabcf9b49b5ef, type: 2}
+  - {fileID: 2100000, guid: badd7ac4010487547b76d5bd3a0a6728, type: 2}
+  - {fileID: 2100000, guid: dcf5061880b0e534581f1b067f47f59d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -257,10 +257,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 20
+  owner: {fileID: 0}
   enemyTag: Enemy
   partToRotate: {fileID: 4939663469259748}
   turnSpeed: 10
-  fireRate: 0.75
+  fireRate: 1
   bulletPrefab: {fileID: 1541845592792086, guid: a1baf8667d319244b8efc4c2b8bb347e,
     type: 2}
   firePoint: {fileID: 4151907366948384}

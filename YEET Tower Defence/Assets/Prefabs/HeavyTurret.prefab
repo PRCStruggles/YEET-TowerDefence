@@ -84,6 +84,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4204094399832960}
+  - component: {fileID: 23032798647428732}
   m_Layer: 0
   m_Name: PartToRotate
   m_TagString: Untagged
@@ -160,6 +161,41 @@ Transform:
   m_Father: {fileID: 4204094399832960}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &23032798647428732
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1593100280721926}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 31155e34904ba0345ac7b0c1729e5b80, type: 2}
+  - {fileID: 2100000, guid: 84fa5de5993ee844fb2bff296f5e36e5, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!23 &23232624587237424
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -174,8 +210,8 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 58df39541e37b0a42b51d9e4ac31855a, type: 2}
-  - {fileID: 2100000, guid: ebc56ccf24d813147b0cabcf9b49b5ef, type: 2}
+  - {fileID: 2100000, guid: 31155e34904ba0345ac7b0c1729e5b80, type: 2}
+  - {fileID: 2100000, guid: 84fa5de5993ee844fb2bff296f5e36e5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -257,10 +293,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 30
+  owner: {fileID: 0}
   enemyTag: Enemy
   partToRotate: {fileID: 4204094399832960}
-  turnSpeed: 10
-  fireRate: 0.5
+  turnSpeed: 15
+  fireRate: 2
   bulletPrefab: {fileID: 1541845592792086, guid: a1baf8667d319244b8efc4c2b8bb347e,
     type: 2}
   firePoint: {fileID: 4164752115020350}
